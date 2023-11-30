@@ -1,5 +1,4 @@
-#if you can use mozilla to run or just to see the API data
-#or simply use "JSON VIEWER" extension in chrome or whatever browser are you using....
+# if you can use mozilla to run or just to see the API data or simply use "JSON VIEWER" extension in chrome or whatever browser are you using....
 
 
 
