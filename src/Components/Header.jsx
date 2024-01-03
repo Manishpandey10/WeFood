@@ -9,7 +9,7 @@ export const Header = () => {
 
   // useEffect(()=>{},[])
     return (
-      <div className="flex justify-between shadow-lg m-3 mb-2 bg-yellow-400" >
+      <div className="flex justify-between shadow-lg m-3 mb-2 bg-fuchsia-300" >
         <img
           className="w-34 h-40"
           src={LOGO_URL}

@@ -6,7 +6,7 @@ const RestroCard = (props) => {
     // console.log(resData.info);
   
     return (
-      <div className="mx-4 mb-5 p-5 rounded-sm  " style={{ backgroundColor: "#EEEEEE" }}>
+      <div className="mx-4 mb-5 p-5 rounded-sm hover:border-black hover:shadow-xl" style={{ backgroundColor: "#EEEEEE" }}>
         <img className="rounded-lg w-[200px] h-[200px]" src= {CDN_URL+cloudinaryImageId} />
         <h3 className="font-bold">{name}</h3>
         <h4>{cuisines.slice(0,2).join(',')}</h4>

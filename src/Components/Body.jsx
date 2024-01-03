@@ -8,7 +8,7 @@ import { useOnlineStatus } from "../utils/useOnlineStatus";
 const Body = () => {
 
   const onlineStatus = useOnlineStatus()
-  console.log(useState())
+  // console.log(useState())
   // state Variables
   //this is array destructuring on the fly ^^^^^
   //like this.
@@ -23,11 +23,11 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.6339793&lng=74.8722642&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
 
     const apiData = await data.json();
     // console.log(apiData)
-    console.log(apiData.data.cards[5].card.card);
+    // console.log(apiData.data.cards[5].card.card);
     //optional chaining
 
     setListOfRestraunts(
@@ -62,13 +62,13 @@ const Body = () => {
         <div className="search m-6 p-2 ">
           <input
             type="text"
-            className="border border-solid hover:border-black"
+            className="border border-solid hover:border-black hover:shadow-lg"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
-          <button className="px-4 m-4 bg-red-500 hover:bg-red-400 active:bg-green-400 rounded-lg"
+          <button className="px-4 m-4 bg-red-500 hover:bg-red-400 hover:shadow-lg active:bg-green-400 rounded-lg"
             onClick={() => {
               const newList = listOfRestraunts.filter(
                 (res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
@@ -77,12 +77,12 @@ const Body = () => {
           >
             Search
           </button>
-          <button className="px-4 m-2 bg-red-500 hover:bg-red-400 active:bg-green-400 rounded-lg" onClick={resetSearch}>
+          <button className="px-4 m-2 bg-red-500 hover:bg-red-400 hover:shadow-lg active:bg-green-400 rounded-lg" onClick={resetSearch}>
             Reset Search 
           </button>  
 
         <button
-          className=" px-4 m-2  hover:bg-red-600 hover:border border-black"
+          className=" px-4 m-2  hover:bg-red-300 hover:border-black hover:shadow-lg border-black"
           onClick={() => {
             filteredList = listOfRestraunts.filter((res) => {
               return res.info.avgRating > 4.1;
