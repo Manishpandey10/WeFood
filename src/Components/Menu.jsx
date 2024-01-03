@@ -38,7 +38,7 @@ const Menu = () => {
   return (
     <div className="flex flex-col space-y-4">
       <h1 className="text-black text-3xl m-auto ">{name}</h1>
-      <p className="text-2xl flex-auto">
+      <p className="text-2xl ">
         Cuisines: {cuisines.join(",")} - {costForTwoMessage}
       </p>
       <ul className="list-disc list-inside m-auto">
