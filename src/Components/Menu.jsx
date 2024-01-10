@@ -1,39 +1,21 @@
-import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API } from "../Utils/constants";
+import useMenu from "../utils/useMenu";
+import { useState } from "react";
+
+
 const Menu = () => {
-  const [resInfo, setResInfo] = useState(null);
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
+  
   const {resId} = useParams()
+  const resInfo = useMenu(resId);
 
-  const fetchMenu = async () => {
-    const data = await fetch(
-     MENU_API+resId
-    );
-    const menuData = await data.json();
-
-    console.log(menuData.data);
-    setResInfo(menuData.data);
-    console.log(resInfo);
-  };
   if (resInfo === null) return <Shimmer />;
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards[0]?.card?.card?.info;
-  //{//     let name, cuisines, costForTwoMessage;
-
-  // if (resInfo?.cards[0]?.card?.card?.info) {
-  //     ({ name, cuisines, costForTwoMessage } = resInfo.cards[0].card.card.info);
-  //
-  // another way to deconstruct , idk whats happening here , ill try
-  // }}//
 
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
-    //   console.log(itemCards);
+      console.log(itemCards);
 
   return (
     <div className="flex flex-col space-y-4">

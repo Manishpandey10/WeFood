@@ -16,7 +16,6 @@ const Body = () => {
   // const arr = useState([])
   // const[listOfRestraunts, setListOfRestraunts] = arr
 
-
   const [listOfRestraunts, setListOfRestraunts] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants]= useState([])
   const [searchText, setSearchText] = useState("");
@@ -26,7 +25,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=30.7333148&lng=76.7794179&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
 
     const apiData = await data.json();
     //
@@ -44,7 +43,8 @@ const Body = () => {
         ?.restaurants)
 
       };
-      // console.log(listOfRestraunts)
+      // 
+      //console.log(listOfRestraunts)
   // ok its fine i just assigned the listof restro. to the set variable of the reset search button so that 
   //(the f here !! down here `), its solved actually i used setFilteredRestaurants here!!
   const resetSearch = ()=>{
@@ -53,9 +53,6 @@ const Body = () => {
      setFilteredRestaurants(listOfRestraunts);
     console.log("dom is not updating");}
   //also called conditional Rendering
-  //without conditional rendering 
-  
-
 
   if (onlineStatus===false)
   return(
