@@ -1,7 +1,5 @@
 export const Cart = ()=>{
     return (
-        <>
-        This here will be used as CART page
-        </>
+        <div className="flex justify-center items-center">Your cart is Empty !! </div>
     )
 }

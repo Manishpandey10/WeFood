@@ -44,7 +44,7 @@ const Body = () => {
 
       };
       // 
-      //console.log(listOfRestraunts)
+      console.log(listOfRestraunts)
   // ok its fine i just assigned the listof restro. to the set variable of the reset search button so that 
   //(the f here !! down here `), its solved actually i used setFilteredRestaurants here!!
   const resetSearch = ()=>{
@@ -62,7 +62,7 @@ const Body = () => {
     return <Shimmer />
   }
   return(
-    <div className="body ">
+    <div className="body">
       <div className="flex">
         <div className="search m-6 p-2 ">
           <input
@@ -89,11 +89,12 @@ const Body = () => {
         <button
           className=" px-4 m-2  hover:bg-red-300 hover:border-black hover:shadow-lg border-black"
           onClick={() => {
-            filteredList = listOfRestraunts.filter((res) => {
-              return res.info.avgRating > 4.1;
+            const filteredList = listOfRestraunts.filter((res) => {
+              return res.info.avgRating > 4.3;
             });
-            console.log(filteredList);
+            // console.log(filteredList);
             setFilteredRestaurants(filteredList);
+            
           }}
         >
           Today's Top Restraunts

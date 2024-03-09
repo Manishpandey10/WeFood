@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { LOGO_URL } from "../Utils/constants";
+import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
+import DarkModeToggle from "./ToggleDarkMode";
 
 export const Header = () => {
   const onlineStatus = useOnlineStatus();
@@ -16,6 +17,9 @@ export const Header = () => {
         />
         <div className="flex items-center">
           <ul className="flex p-5 m-5">
+            <li>
+            {/* <button onClick={DarkModeToggle()}>Dark</button> */}
+            </li>
             <li className="px-4">Status : {onlineStatus ? "✅": "🔴"}</li>
             <li className="px-4">
               <Link to="/">Home</Link>
