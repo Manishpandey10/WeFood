@@ -18,9 +18,9 @@ const Menu = () => {
       console.log(itemCards);
 
   return (
-    <div className="flex flex-col space-y-4">
+    <div className=" flex  flex-col space-y-4">
       <h1 className="text-black text-3xl m-auto ">{name}</h1>
-      <p className="text-2xl ">
+      <p className=" flex justify-center items-center text-2xl ">
         Cuisines: {cuisines.join(",")} - {costForTwoMessage}
       </p>
       <ul className="list-disc list-inside m-auto">

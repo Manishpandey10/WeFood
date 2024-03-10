@@ -16,8 +16,10 @@ const Grocery = lazy(()=>import("./Components/Grocery"))
 const AppLayout = () => {
   return (
     <>
+    <div className="bg-sky-600 bg-opacity">
       <Header />
       <Outlet/>
+    </div>
     </>
   );
 };
