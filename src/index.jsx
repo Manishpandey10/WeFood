@@ -5,7 +5,7 @@ import Body from "./Components/Body"
 
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Cart } from "./Components/Cart";
-import { Error } from "./Components/Error";
+import Error from "./Components/Error";
 import Menu from "./Components/Menu"
 import About from "./Components/About";
 import Shimmer from "./Components/Shimmer";
@@ -16,7 +16,7 @@ const Grocery = lazy(()=>import("./Components/Grocery"))
 const AppLayout = () => {
   return (
     <>
-    <div className="bg-sky-600 bg-opacity">
+    <div className="bg-white bg-opacity">
       <Header />
       <Outlet/>
     </div>

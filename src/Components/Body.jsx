@@ -67,7 +67,7 @@ const Body = () => {
   }
   return (
     <div className="body">
-      <div className="flex  justify-end items-end">
+      <div className="flex items-start justify-start">
         <div className="search m-6 p-2 ">
           <input
             type="text"
