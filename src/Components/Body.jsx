@@ -2,6 +2,7 @@ import RestroCard from "./RestroCard";
 // import resList from "../Utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 
@@ -78,7 +79,13 @@ const Body = () => {
               setSearchText(e.target.value);
             }}
           />
-          <button
+          <Button onClick={() => {
+              const newList = listOfRestraunts.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilteredRestaurants(newList);
+            }}>Button</Button>
+          {/* <button
             className="px-4 m-4 hover:bg-gray-400 hover:shadow-lg active:bg-purple-400 rounded-lg"
             onClick={() => {
               const newList = listOfRestraunts.filter((res) =>
@@ -101,7 +108,7 @@ const Body = () => {
                 d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="flex flex-wrap items-center justify-normal mb-5 box-border">

@@ -10,6 +10,7 @@ const Menu = () => {
   const resInfo = useMenu(resId);
 
   if (resInfo === null) return <Shimmer />;
+  
   const { name, cuisines, costForTwoMessage } =
     resInfo?.cards[0]?.card?.card?.info;
 
