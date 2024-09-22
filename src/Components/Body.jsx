@@ -1,20 +1,12 @@
 import RestroCard from "./RestroCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
-import { Button } from "@/Components/ui/button"
+// import { Button } from "@/Components/ui/button"
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 
 const Body = () => {
   const onlineStatus = useOnlineStatus();
-  //
-  //console.log(useState())
-  // state Variables
-  //this is array destructuring on the fly ^^^^^
-  //like this.
-  // const arr = useState([])
-  // const[listOfRestraunts, setListOfRestraunts] = arr
-
   const [listOfRestraunts, setListOfRestraunts] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
