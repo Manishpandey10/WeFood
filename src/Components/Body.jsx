@@ -68,14 +68,14 @@ const Body = () => {
               setSearchText(e.target.value);
             }}
           />
-          <Button onClick={() => {
+          {/* <Button onClick={() => {
               const newList = listOfRestraunts.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setFilteredRestaurants(newList);
-            }}>Button</Button>
-          {/* <button
-            className="px-4 m-4 hover:bg-gray-400 hover:shadow-lg active:bg-purple-400 rounded-lg"
+            }}>Button</Button> */}
+          <button
+          type="button" class="px-3 py-2 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm  text-center me-2 mb-2"
             onClick={() => {
               const newList = listOfRestraunts.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -83,21 +83,8 @@ const Body = () => {
               setFilteredRestaurants(newList);
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
-          </button> */}
+          Search
+          </button>   
         </div>
       </div>
       <div className="flex flex-wrap items-center justify-normal mb-5 box-border">
